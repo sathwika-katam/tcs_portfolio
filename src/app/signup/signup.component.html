@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>Sign Up Page</h2>
+        <form [formGroup]="signupRef" (ngSubmit)="checkUser()">    
+            <label >Username</label>
+            <input type="text" formControlName="userName"><br/><br/>
+            <label>Password</label>
+            <input type="password" formControlName="password"><br/><br/>
+            <span>
+                <input type="submit" value="Register" >
+                <input type="reset" value="Reset" />
+            </span>
+            <!--input type="button" value="Login" (click)="loginPage()"-->
+        </form>
+        <div>{{info}}</div>
+    
+    </div>
+</body>
+</html>

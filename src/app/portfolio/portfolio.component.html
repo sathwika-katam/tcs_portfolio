@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <h1>My Portfolio</h1>
+    <p>Welcome</p>
+    <form [formGroup]="portfolioRef" (ngSubmit)="save()">
+    <label>Contact Name</label>
+    <input type="text" formControlName="cname"><br/>
+    <label>Phone Number</label>
+    <input type="tel" formControlName="phoneNumber"><br/>
+    <input type="submit" value="save">
+    <table id="myDetails">
+        <thead>
+            <tr>
+            <th>Name</th>
+            <th>Phone No:</th>
+            </tr>
+            <tr *ngFor="let p of portfolioList">
+                <td>{{p.name}}</td>
+                <td>{{p.phoneNumber}}</td>
+            </tr>
+        </thead>
+    </table>
+   </form> 
+
+</div>
+    
+</body>
+</html>
+<div>
+    
